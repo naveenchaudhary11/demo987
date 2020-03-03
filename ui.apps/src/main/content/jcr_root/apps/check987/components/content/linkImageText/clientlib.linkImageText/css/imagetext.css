@@ -1,0 +1,41 @@
+/* Image Text Styles */
+
+.imageText {
+    margin-bottom: 10px;
+}
+.imageText .sc-image {
+    margin: 0;
+    width:100%;
+    height: auto;
+    display:block;
+}
+.imageText h2 {
+    color: #000000;
+    font-size: 24px;
+    margin: 0;
+    padding: 6px 0;
+    border: 0;
+}
+.imageText .sc-border-bottom {
+    margin:10px 0;
+    border-bottom: 2px solid #76b0bd;
+}
+.imageText .sc-desc {
+	margin:10px 0;
+}
+.imageText .sc-desc a {
+    color: #838b8f;
+    font-size: 13px;
+}
+.imageText .sc-desc .fa {
+    color: #b0151e;
+    padding: 0 5px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+    .imageText h2 {
+        font-size: 20px;
+    }
+    .imageText .sc-border-bottom {
+        border-bottom: 1px solid #76b0bd;
+    }
+}

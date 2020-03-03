@@ -1,0 +1,10 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+<sly data-sly-call="${clientlib.css @ categories='aemsightlyfastforward.backgroundImgTextcomp'}" />
+<div data-sly-test="${wcmmode.edit}"> Background Image and Text Component </div>
+<div class="backgroundImgTextWrapper ${properties.padding}">
+    <div class="textBgImgOverlay"><img src="${properties.fileReference @ context='unsafe'}" class="textBgImg img-responsive" alt="background Image with Text"></div>
+    <div class="textbackground">
+        <span class="textBgImgTitle">${properties.title}</span>
+        <h5 class="textBgImgDesc">${properties.description}</h5>
+    </div>
+</div>

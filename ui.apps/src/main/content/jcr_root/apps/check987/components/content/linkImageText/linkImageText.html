@@ -1,0 +1,33 @@
+<div data-sly-test="${wcmmode.edit}">Edit Link Image text Component here</div>
+<div data-sly-use.image="image.js"></div>
+<sly data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}" data-sly-unwrap/>
+<sly data-sly-call="${clientLib.css @ categories='aemsightlyfastforward.linkimagetext'}" data-sly-unwrap></sly>
+<div data-sly-test="${properties.bottomborder}" data-sly-unwrap>
+    <div class="richte1" >
+
+        <img class="sc-image" data-sly-test="${image.src}" src="${image.src}"  alt="${image.alt}"/>
+        <div class="${properties.cssClass} sc-border-bottom" >${properties.text @ context='html'}</div>
+        <div data-sly-test="${properties.showDescription}" data-sly-unwrap>
+            <sly data-sly-test="${!properties.linkToURL}">
+            	<p class="sc-desc"><a href="#" class="sc-page-redirect">${properties.description @ context='html'}<span><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span></a></p>
+            </sly>
+            <sly data-sly-test="${properties.linkToURL}">
+            	<p class="sc-desc"><a href="${properties.linkToURL}.html" class="sc-page-redirect">${properties.description @ context='html'}<span><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span></a></p>
+            </sly>
+        </div>
+    </div>
+</div>
+<div data-sly-test="${!properties.bottomborder}" data-sly-unwrap>
+    <div class="richte3" >
+        <img class="sc-image" data-sly-test="${image.src}" src="${image.src}" alt="${image.alt}"/>
+        <div class="${properties.cssClass}" >${properties.text @ context='html'}</div>
+        <div data-sly-test="${properties.showDescription}" data-sly-unwrap>
+            <sly data-sly-test="${!properties.linkToURL}">
+        		<p class="sc-desc"><a href="#" class="sc-page-redirect">${properties.description @ context='html'}<span><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span></a></p>
+        	</sly>
+        	<sly data-sly-test="${properties.linkToURL}">
+        		<p class="sc-desc"><a href="${properties.linkToURL}.html" class="sc-page-redirect">${properties.description @ context='html'}<span><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span></a></p>
+        	</sly>  	
+        </div>
+    </div>
+</div>
